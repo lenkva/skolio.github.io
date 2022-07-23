@@ -60,3 +60,5 @@ exclude:
   - vendor/ruby/
   - cypress
   - package
+
+include: [CNAME] 

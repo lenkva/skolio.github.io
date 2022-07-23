@@ -3,8 +3,8 @@ name: Cypress Smoke Test
 
 # Controls when the workflow will run
 on:
-  pull_request:
-    branches: [ main ]
+  #pull_request:
+  #  branches: [ main ]
   workflow_dispatch:
 
 jobs:

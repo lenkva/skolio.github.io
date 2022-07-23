@@ -2,10 +2,10 @@
 name: Cypress Matrix Test
 
 on:
-  push:
-    branches: 
-      - 'main'
-      - 'hotfix/**'
+  #push:
+  #  branches: 
+  #    - 'main'
+  #    - 'hotfix/**'
   workflow_dispatch:
 
 jobs:

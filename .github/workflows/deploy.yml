@@ -53,6 +53,5 @@ jobs:
         with:                                # Some relative inputs of your action
           keep_history: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          jekyll_src: source
           target_branch: gh-pages
           build_only: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build-only == 'true' }}

@@ -29,6 +29,9 @@ jobs:
       - name: Log Input
         run: "echo Build Only: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build-only == 'true' }}"
 
+      - name: Set safe directory
+        run: git config --global --add safe.directory /github/workspace
+
       # Checkout git branch
       - name: Checkout
         uses: actions/checkout@v3.0.2
@@ -43,9 +46,6 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-
-      - name: Set safe directory
-        run: git config --global --add safe.directory /github/workspace
 
       # Build the site and push new state to branch gh-pages
       - name: Run Jekyll

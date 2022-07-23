@@ -56,3 +56,17 @@ jobs:
           jekyll_src: source
           target_branch: gh-pages
           build_only: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build-only == 'true' }}
+
+  copy-cname:
+    name: Copy CNAME to gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Copy To Branches Action
+        uses: planetoftheweb/copy-to-branches@v1
+        env:
+          key: main
+          files: CNAME
+          branches: gh-pages

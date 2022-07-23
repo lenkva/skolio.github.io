@@ -33,7 +33,7 @@ repository: lenkva/skolio.github.io
 
 source: source
 sass:
-  sass_dir: _sass
+  sass_dir: source/_sass
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -58,7 +58,7 @@ jobs:
           build_only: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build-only == 'true' }}
 
       - name: Copy CNAME
-        uses: planetoftheweb/copy-to-branches@v1
+        uses: planetoftheweb/copy-to-branches@v1.2
         env:
           key: deploy
           files: CNAME

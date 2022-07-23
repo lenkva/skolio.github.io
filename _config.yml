@@ -31,7 +31,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lenkva
 repository: lenkva/skolio.github.io
 
-source: source
+#source: source
 sass:
   sass_dir: _sass
 
@@ -61,4 +61,4 @@ exclude:
   - cypress
   - package
 
-include: [CNAME] 
+#include: [CNAME] 

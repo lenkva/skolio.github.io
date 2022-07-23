@@ -59,6 +59,7 @@ jobs:
 
   copy-cname:
     name: Copy CNAME to gh-pages
+    needs: github-pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

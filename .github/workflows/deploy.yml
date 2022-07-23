@@ -57,15 +57,7 @@ jobs:
           target_branch: gh-pages
           build_only: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build-only == 'true' }}
 
-  copy-cname:
-    name: Copy CNAME to gh-pages
-    needs: github-pages
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Copy To Branches Action
+      - name: Copy CNAME
         uses: planetoftheweb/copy-to-branches@v1
         env:
           key: deploy

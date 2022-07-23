@@ -55,4 +55,4 @@ jobs:
           #token: ${{ secrets.GITHUB_TOKEN }}
           jekyll_src: source
           target_branch: gh-pages
-          build_only: true #${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build-only == 'true' }}
+          build_only: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build-only == 'true' }}
